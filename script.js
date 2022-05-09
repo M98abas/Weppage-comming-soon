@@ -1,5 +1,5 @@
 const countDown =()=>{
-    const countDate= new Date("June 19, 2021 00:00:00").getTime();
+    const countDate= new Date("May 26, 2022 09:00:00").getTime();
     const now= new Date().getTime();
     const gap = countDate-now;
     //how the time does work
@@ -19,4 +19,4 @@ const countDown =()=>{
    
 }
 
-setInterval(countDown,1000);
+setInterval(countDown,1100);

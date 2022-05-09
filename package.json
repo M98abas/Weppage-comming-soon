@@ -1,0 +1,11 @@
+{
+  "name": "Weppage-comming-soon",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/M98abas/Weppage-comming-soon.git",
+  "author": "M98abas <mahmoud.ud@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "surge": "^0.23.1"
+  }
+}

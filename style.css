@@ -1,31 +1,117 @@
-*{
-    margin: 0;
-    padding: 0;
-        box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: "Lato",sans-serif;
+body {
+  overflow: hidden;
+  color: white;
+  /* background-image: ; */
+  font-family: "Lato", sans-serif;
 }
-h2{
-    font-weight: bold;
-    font-size: 5rem;
-    padding: 3rem;
+h2 {
+  font-weight: bold;
+  font-size: 5rem;
+  padding: 3rem;
+  animation: animation2 1s linear 2s infinite alternate;
 }
-.container{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+.header {
+  animation: animation2 1s linear 2s infinite alternate;
 }
-.countdown{
-    display: flex;
-    text-align: center;
-    justify-content: space-around;
+
+@keyframes animation2 {
+  from {
+    transform: scale(1.12);
+    /* color: red;; */
+  }
+  to {
+    transform: scale(1);
+  }
 }
-.day,.hour,.minute,.second{
-    font-size: 3rem;
+h2::after {
+  content: "We are Coming Soon!";
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  align-items: center;
+  font-size: 26px;
 }
-.waiting{
-    height: 63vh;
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.countdown {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+.day,
+.hour,
+.minute,
+.second {
+  font-size: 3rem;
+}
+.waiting {
+  height: 63vh;
+  border-radius: 50%;
+}
+
+@keyframes animation {
+  from {
+    color: red;
+  }
+  to {
+    color: gray;
+  }
+}
+.second {
+  animation: animation 1s linear 2s infinite alternate;
+}
+.event {
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  z-index: -1;
+  top: 0;
+  filter: brightness(0.5);
+}
+span,
+.dot {
+  font-weight: bold;
+  color: #ff0026;
+}
+
+.it {
+  font-size: 5rem;
+  font-weight: bold;
+  border: 3px solid #b8bbc1;
+  color: #b8bbc1;
+}
+
+@media screen and (max-width: 950px) {
+  body {
+    background-color: #860014;
+  }
+  span {
+    color: black;
+  }
+  h2 {
+    top: 0;
+    animation: none;
+    transform: scale(1);
+    color: black;
+  }
+  .live {
+    color: #ff0026;
+  }
+  .event {
+    display: none;
+  }
+  .countdown {
+    color: black;
+    transform: scale(0.5);
+  }
 }
